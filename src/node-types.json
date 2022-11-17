@@ -1,5 +1,690 @@
 [
   {
+    "type": "anon_named_datatype",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "anon_named_type_name",
+          "named": true
+        },
+        {
+          "type": "datatype",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "any_data_seq",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "any_data_seq",
+          "named": true
+        },
+        {
+          "type": "any_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "any_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array_element",
+          "named": true
+        },
+        {
+          "type": "atomic_element",
+          "named": true
+        },
+        {
+          "type": "compound_element",
+          "named": true
+        },
+        {
+          "type": "variable_length_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "any_data_seq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atomic_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bitfield_data",
+          "named": true
+        },
+        {
+          "type": "enum_data",
+          "named": true
+        },
+        {
+          "type": "float_data",
+          "named": true
+        },
+        {
+          "type": "integer_data",
+          "named": true
+        },
+        {
+          "type": "opaque_data",
+          "named": true
+        },
+        {
+          "type": "reference_data",
+          "named": true
+        },
+        {
+          "type": "string_data",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atomic_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "h5t_bitfield",
+          "named": true
+        },
+        {
+          "type": "h5t_float",
+          "named": true
+        },
+        {
+          "type": "h5t_integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attr_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attr_name",
+          "named": true
+        },
+        {
+          "type": "data",
+          "named": true
+        },
+        {
+          "type": "dataset_space",
+          "named": true
+        },
+        {
+          "type": "dataset_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bitfield_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "hex_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bound_pair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lower_bound",
+          "named": true
+        },
+        {
+          "type": "upper_bound",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "compound_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "any_data_seq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cset",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ctype",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "current_dims",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dims",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "scalar_space_data",
+          "named": true
+        },
+        {
+          "type": "simple_space_data",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_region_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data",
+          "named": true
+        },
+        {
+          "type": "data_region_data_list",
+          "named": true
+        },
+        {
+          "type": "data_region_type",
+          "named": true
+        },
+        {
+          "type": "dataset_name",
+          "named": true
+        },
+        {
+          "type": "dataset_space",
+          "named": true
+        },
+        {
+          "type": "dataset_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_region_data_info",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "point_info",
+          "named": true
+        },
+        {
+          "type": "region_info",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_region_data_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_region_data_info",
+          "named": true
+        },
+        {
+          "type": "data_region_data_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_region_data_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "data_region_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "data_region_data_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dataset_info",
+          "named": true
+        },
+        {
+          "type": "dataset_name",
+          "named": true
+        },
+        {
+          "type": "hardlink",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset_info",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data",
+          "named": true
+        },
+        {
+          "type": "dataset_attribute",
+          "named": true
+        },
+        {
+          "type": "dataset_space",
+          "named": true
+        },
+        {
+          "type": "dataset_type",
+          "named": true
+        },
+        {
+          "type": "object_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset_space",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dataspace",
+          "named": true
+        },
+        {
+          "type": "path_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataset_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "datatype",
+          "named": true
+        },
+        {
+          "type": "path_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataspace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "null_space",
+          "named": true
+        },
+        {
+          "type": "scalar_space",
+          "named": true
+        },
+        {
+          "type": "simple_space",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datatype",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "atomic_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dims",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dims_values",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dims_values",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dims_values",
+          "named": true
+        },
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_base_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "h5t_integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_symbol",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_symbol",
+          "named": true
+        },
+        {
+          "type": "enum_val",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_symbol",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_val",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "external_link",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "external_link_name",
+          "named": true
+        },
+        {
+          "type": "targetfile",
+          "named": true
+        },
+        {
+          "type": "targetobj",
+          "named": true
+        },
+        {
+          "type": "targetpath",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "external_link_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "file",
     "named": true,
     "fields": {},
@@ -34,6 +719,122 @@
     }
   },
   {
+    "type": "float_data",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "group_attribute",
+          "named": true
+        },
+        {
+          "type": "group_comment",
+          "named": true
+        },
+        {
+          "type": "group_member",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "hardlink",
+          "named": true
+        },
+        {
+          "type": "object_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string_data",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dataset",
+          "named": true
+        },
+        {
+          "type": "external_link",
+          "named": true
+        },
+        {
+          "type": "group",
+          "named": true
+        },
+        {
+          "type": "named_datatype",
+          "named": true
+        },
+        {
+          "type": "softlink",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "h5t_bitfield",
     "named": true,
     "fields": {}
@@ -49,21 +850,727 @@
     "fields": {}
   },
   {
+    "type": "hardlink",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "path_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hex_value",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "identifier",
     "named": true,
     "fields": {}
   },
   {
-    "type": "root_group",
+    "type": "int_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "pos_int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "integer_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lower_bound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "max_dim",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "max_dim_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "max_dim",
+          "named": true
+        },
+        {
+          "type": "max_dim_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "max_dims",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "max_dim_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "named_datatype",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "datatype",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "null_space",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "object_id",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "object_num",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "object_num",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "object_ref_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "object_num",
+          "named": true
+        },
+        {
+          "type": "object_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "object_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "opaque_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "hex_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "path_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path_part",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "point_info",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "point_vals",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "point_vals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        },
+        {
+          "type": "point_vals",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pos_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "pos_int",
+          "named": true
+        },
+        {
+          "type": "pos_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reference_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "data_region_data",
+          "named": true
+        },
+        {
+          "type": "object_ref_data",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "region_info",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "region_vals",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "region_vals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bound_pair",
+          "named": true
+        },
+        {
+          "type": "region_vals",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "root_group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "anon_named_datatype",
+          "named": true
+        },
+        {
+          "type": "group_attribute",
+          "named": true
+        },
+        {
+          "type": "group_comment",
+          "named": true
+        },
+        {
+          "type": "group_member",
+          "named": true
+        },
+        {
+          "type": "object_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scalar_space_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "any_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_space",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "current_dims",
+          "named": true
+        },
+        {
+          "type": "max_dims",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_space_data",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "any_data_seq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "softlink",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "softlink_name",
+          "named": true
+        },
+        {
+          "type": "target",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "softlink_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_data",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "strpad",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "strsize",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "target",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "targetfile",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "file_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "targetobj",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dataset",
+          "named": true
+        },
+        {
+          "type": "group",
+          "named": true
+        },
+        {
+          "type": "named_datatype",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "targetpath",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "upper_bound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_length_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "any_data_seq",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "\"",
     "named": false
   },
   {
-    "type": "GROUP \"/\"",
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ", ",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "0",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "ATTRIBUTE",
+    "named": false
+  },
+  {
+    "type": "BITS",
+    "named": false
+  },
+  {
+    "type": "BLOCK",
+    "named": false
+  },
+  {
+    "type": "CHECKSUM",
+    "named": false
+  },
+  {
+    "type": "COMMENT",
+    "named": false
+  },
+  {
+    "type": "COMPRESSION",
+    "named": false
+  },
+  {
+    "type": "CSET",
+    "named": false
+  },
+  {
+    "type": "CTYPE",
+    "named": false
+  },
+  {
+    "type": "DATA",
+    "named": false
+  },
+  {
+    "type": "DATASET",
+    "named": false
+  },
+  {
+    "type": "DATASPACE",
+    "named": false
+  },
+  {
+    "type": "DATATYPE",
+    "named": false
+  },
+  {
+    "type": "EXTERNAL_LINK",
+    "named": false
+  },
+  {
+    "type": "FLETCHER32",
+    "named": false
+  },
+  {
+    "type": "GROUP",
+    "named": false
+  },
+  {
+    "type": "GROUP \"/\" {",
+    "named": false
+  },
+  {
+    "type": "H5S_UNLIMITED",
+    "named": false
+  },
+  {
+    "type": "H5T_CSET_ASCII",
+    "named": false
+  },
+  {
+    "type": "H5T_CSET_UTF8",
+    "named": false
+  },
+  {
+    "type": "H5T_C_S1",
+    "named": false
+  },
+  {
+    "type": "H5T_ENUM",
+    "named": false
+  },
+  {
+    "type": "H5T_FORTRAN_S1",
     "named": false
   },
   {
@@ -231,7 +1738,135 @@
     "named": false
   },
   {
+    "type": "H5T_STRING",
+    "named": false
+  },
+  {
+    "type": "H5T_STR_NULLPAD",
+    "named": false
+  },
+  {
+    "type": "H5T_STR_NULLTERM",
+    "named": false
+  },
+  {
+    "type": "H5T_STR_SPACEPAD",
+    "named": false
+  },
+  {
+    "type": "HARDLINK",
+    "named": false
+  },
+  {
     "type": "HDF5",
+    "named": false
+  },
+  {
+    "type": "HEADER",
+    "named": false
+  },
+  {
+    "type": "LINKTARGET",
+    "named": false
+  },
+  {
+    "type": "MIN",
+    "named": false
+  },
+  {
+    "type": "NULL",
+    "named": false
+  },
+  {
+    "type": "OBJECTID {",
+    "named": false
+  },
+  {
+    "type": "OFFSET",
+    "named": false
+  },
+  {
+    "type": "PARAMS",
+    "named": false
+  },
+  {
+    "type": "POINT",
+    "named": false
+  },
+  {
+    "type": "RAW",
+    "named": false
+  },
+  {
+    "type": "REGION_TYPE",
+    "named": false
+  },
+  {
+    "type": "SCALEOFFSET",
+    "named": false
+  },
+  {
+    "type": "SIMPLE",
+    "named": false
+  },
+  {
+    "type": "SIZE",
+    "named": false
+  },
+  {
+    "type": "SOFTLINK",
+    "named": false
+  },
+  {
+    "type": "STRPAD",
+    "named": false
+  },
+  {
+    "type": "STRSIZE",
+    "named": false
+  },
+  {
+    "type": "TARGETFILE",
+    "named": false
+  },
+  {
+    "type": "TARGETPATH",
+    "named": false
+  },
+  {
+    "type": "UNKNOWN_FILTER",
+    "named": false
+  },
+  {
+    "type": "USER_REGISTERED_FILTER",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "anon_named_type_name",
+    "named": true
+  },
+  {
+    "type": "pos_int",
+    "named": true
+  },
+  {
+    "type": "scalar_space",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]

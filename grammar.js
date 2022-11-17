@@ -1,3 +1,14 @@
+const PREC = {
+  identifier: 1,
+  string_data: 2,
+  scalar_space_data: 1,
+  any_data_seq: 2,
+  bitfield_data: 1,
+  opaque_data: 2,
+  variable_length_element: 1,
+  compound_element: 2,
+}
+
 module.exports = grammar({
   name: 'h5dump',
 
@@ -163,7 +174,7 @@ module.exports = grammar({
 
     path_name: $ => repeat1($.path_part),
 
-    path_part: $ => token.immediate(seq('/', $.identifier)),
+    path_part: $ => seq('/', $.identifier),
 
     dataspace: $ => choice(
       $.scalar_space,
@@ -197,7 +208,7 @@ module.exports = grammar({
       // $.subset
     ),
 
-    scalar_space_data: $ => $.any_element,
+    scalar_space_data: $ => prec(PREC.scalar_space_data, $.any_element),
 
     any_element: $ => choice(
       $.atomic_element,
@@ -206,7 +217,7 @@ module.exports = grammar({
       $.array_element,
     ),
 
-    any_data_seq: $ => choice($.any_element, seq($.any_element, ',', $.any_data_seq)),
+    any_data_seq: $ => prec(PREC.any_data_seq, choice(seq($.any_element, ',', $.any_data_seq), $.any_element)),
 
     atomic_element: $ => choice(
       $.integer_data,
@@ -243,9 +254,9 @@ module.exports = grammar({
     // A string is enclosed in double quotes.
     // If a string is displayed on more than one line, string concatenate
     // operator '//' is used.
-    string_data: $ => $._string,
-    bitfield_data: $ => $.hex_value,
-    opaque_data: $ => choice(seq($.hex_value, ':', $.hex_value), $.hex_value),
+    string_data: $ => prec(PREC.string_data, $._string),
+    bitfield_data: $ => prec(PREC.bitfield_data, $.hex_value),
+    opaque_data: $ => prec(PREC.opaque_data, choice(seq($.hex_value, ':', $.hex_value), $.hex_value)),
     enum_data: $ => $.enum_symbol,
     reference_data: $ => choice($.object_ref_data, $.data_region_data, 'NULL'),
     object_ref_data: $ => seq($.object_type, $.object_num),
@@ -259,7 +270,7 @@ module.exports = grammar({
     ),
 
     object_num: $ => choice(
-      token.immediate(seq($.int_value, ':', $.int_value)),
+      seq($.int_value, ':', $.int_value),
       $.int_value
     ),
 
@@ -289,23 +300,28 @@ module.exports = grammar({
       seq($.int_value, ',', $.point_vals),
       $.int_value
     ),
-    compound_element: $ => seq('{', $.any_data_seq, '}'),
+    compound_element: $ => prec(PREC.compound_element, seq('{', $.any_data_seq, '}')),
     // atomic_simple_data
     simple_space_data: $ => $.any_data_seq,
-    variable_length_element: $ => seq('{', $.any_data_seq, '}'),
+    variable_length_element: $ => prec(PREC.variable_length_element, seq('{', $.any_data_seq, '}')),
     array_element: $ => seq('[', $.any_data_seq, ']'),
     named_datatype: $ => seq('DATATYPE', $.type_name, '{', $.datatype, '}'),
     type_name: $ => $.identifier,
     hardlink: $ => seq('HARDLINK', $.path_name),
-    group: $ => seq('GROUP', $.group_name, '{', choice($.hardlink, $.group_info), '}'),
+    group: $ => seq(
+      'GROUP', $.group_name, '{',
+      choice(
+        $.hardlink,
+        seq(
+          optional($.object_id),
+          optional($.group_comment),
+          repeat($.group_attribute),
+          repeat($.group_member)
+        )),
+      '}'
+    ),
     group_comment: $ => seq('COMMENT', $.string_data),
     group_name: $ => $.identifier,
-    group_info: $ => seq(
-      optional($.object_id),
-      optional($.group_comment),
-      repeat($.group_attribute),
-      repeat($.group_member)
-    ),
     group_attribute: $ => $.attribute,
     group_member: $ => choice(
       $.named_datatype,
@@ -376,7 +392,7 @@ module.exports = grammar({
     targetobj: $ => choice($.named_datatype, $.group, $.dataset),
 
     // The BNF grammar just says 'a string'.  Stolen from JSON "string" for now.
-    identifier: $ => $._string,
+    identifier: $ => prec(PREC.identifier, $._string),
     // character '/' should be used with care.
     _string: $ => choice(
       seq('"', '"'),

@@ -1,0 +1,4 @@
+HDF5 "example.h5" {
+GROUP "/" {
+}
+}
