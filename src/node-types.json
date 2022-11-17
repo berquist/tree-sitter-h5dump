@@ -1,0 +1,237 @@
+[
+  {
+    "type": "file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "file_name",
+          "named": true
+        },
+        {
+          "type": "root_group",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "file_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "h5t_bitfield",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "h5t_float",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "h5t_integer",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "root_group",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "GROUP \"/\"",
+    "named": false
+  },
+  {
+    "type": "H5T_IEEE_F32BE",
+    "named": false
+  },
+  {
+    "type": "H5T_IEEE_F32LE",
+    "named": false
+  },
+  {
+    "type": "H5T_IEEE_F64BE",
+    "named": false
+  },
+  {
+    "type": "H5T_IEEE_F64LE",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_CHAR",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_DOUBLE",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_FLOAT",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_INT",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_LDOUBLE",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_LLONG",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_LONG",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_SHORT",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_UCHAR",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_UINT",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_ULLONG",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_ULONG",
+    "named": false
+  },
+  {
+    "type": "H5T_NATIVE_USHORT",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B16BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B16LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B32BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B32LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B64BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B64LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B8BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_B8LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I16BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I16LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I32BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I32LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I64BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I64LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I8BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_I8LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U16BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U16LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U32BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U32LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U64BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U64LE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U8BE",
+    "named": false
+  },
+  {
+    "type": "H5T_STD_U8LE",
+    "named": false
+  },
+  {
+    "type": "HDF5",
+    "named": false
+  }
+]
